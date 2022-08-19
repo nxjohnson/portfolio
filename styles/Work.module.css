@@ -1,0 +1,79 @@
+.gridLayout {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-gap: 1rem;
+  height: 100%;
+  width: 100%;
+}
+
+.gridLayout .tile {
+  position: relative;
+  background-color: #FFF;
+}
+
+.gridLayout .tile:first-child {
+  height: 100%;
+  grid-column: span 7 / span 7;
+  grid-row: span 2 / span 2;
+}
+
+.gridLayout .tile:nth-child(2),
+.gridLayout .tile:nth-child(3) {
+  grid-column: span 5 / span 5;
+  grid-row: span 1 / span 1;
+}
+
+.tile {
+  padding-bottom: 66.67%;
+}
+
+.tileContent {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  padding: 2em;
+}
+
+.icon {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+}
+
+.icon:hover {
+  color: orangered;
+}
+
+@media (max-width: 800px) {
+  .gridLayout {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, minmax(0, 1fr));
+    grid-gap: 2rem;
+    height: 100%;
+    width: 100%;
+  }
+
+  .gridLayout .tile:first-child {
+    height: 100%;
+    grid-column: span 1 / span 1;
+    grid-row: span 2 / span 2;
+  }
+
+  .gridLayout .tile:nth-child(2),
+  .gridLayout .tile:nth-child(3) {
+    grid-column: span 1 / span 1;
+    grid-row: span 1 / span 1;
+  }
+
+  .tile {
+    padding-bottom: 50%;
+  }
+
+  .tileContent {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    padding: 2em;
+  }
+}

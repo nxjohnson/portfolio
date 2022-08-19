@@ -1,5 +1,8 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import Work from '../components/Work';
+import Skills from '../components/Skills';
+import AboutMe from '../components/AboutMe';
 import ContactForm from '../components/ContactForm';
 import Image from 'next/image'
 import hero from "../public/neil-johnson-hero.jpg";
@@ -9,8 +12,7 @@ import { faGithub, faLinkedin, faLinkedinIn } from '@fortawesome/free-brands-svg
 
 const Home: NextPage = () => {
   return (
-    <div>
-
+    <main className='main'>
       <div className={styles.hero}>
         <Image
           src={hero}
@@ -18,25 +20,30 @@ const Home: NextPage = () => {
           layout="fill"
           objectFit="cover"
           quality={100}
+          priority
         />
         <div className={styles.heroContainer}>
-          <p className={styles.intro}>Hi. I&apos;m Neil.<br />A Full Stack Engineer.</p>
-          <div>
-            <a href="https://www.linkedin.com/in/johnson-neil/" target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon className={styles.icon} icon={faLinkedinIn} size="2x" />
-            </a>
-            <a href="https://github.com/nxjohnson" target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon className={styles.icon} icon={faGithub} size="2x" />
-            </a>
+          <div className={styles.heroContent}>
+            <h1 className={styles.intro}>Hi. I&apos;m Neil.<br />A Full Stack Engineer.</h1>
+            <div>
+              <a href="https://www.linkedin.com/in/johnson-neil/" target="_blank" rel="noopener noreferrer">
+                <FontAwesomeIcon className={styles.icon} icon={faLinkedinIn} size="2x" />
+              </a>
+              <a href="https://github.com/nxjohnson" target="_blank" rel="noopener noreferrer">
+                <FontAwesomeIcon className={styles.icon} icon={faGithub} size="2x" />
+              </a>
+
+          </div>
           </div>
         </div>
       </div>
-      <div className={styles.container}>
-        <div className={styles.card}>Work</div>
-        <div className={styles.card}>About</div>
+      <div className={styles.sectionContainer}>
+        <Work />
+        <Skills />
+        <AboutMe />
       </div>
       <ContactForm />
-    </div>
+    </main>
     // <div className={styles.container}>
     //   <Head>
     //     <title>Create Next App</title>
