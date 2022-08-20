@@ -12,7 +12,6 @@ const Work = () => {
             <div key={project.projectName} className={styles.tile}>
               <div className={styles.tileContent}>
                 <h2>{project.projectName}</h2>
-                {/* <span>{project.techStack.join(', ')}</span> */}
                 <div className={styles.icon}>
                   <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
                     <FontAwesomeIcon icon={faArrowUpRightFromSquare} size="2x" />

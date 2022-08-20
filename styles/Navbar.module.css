@@ -1,21 +1,95 @@
 .navbar {
   width: 100%;
-  background-color: #282828;
-  color: #FFFFFF;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: fixed;
-  top: 0;
-  padding: 1rem 3rem 1rem 3rem;
+  padding: 1rem 3rem;
   z-index: 1;
+  background-color: #282828;
+  color: #FFFFFF;
 }
 
-.links {
+.logo {
   display: flex;
+  align-items: center;
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
+}
+
+.links ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.links li {
   list-style: none;
 }
 
-.links a {
-  margin-left: 2rem;
+.links li a {
+  display: block;
+  padding-left: 2rem;
+  text-decoration: none;
 }
+
+.hamburgerMenu {
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  justify-content: space-evenly;
+  top: 1.5rem;
+  right: 3rem;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+}
+
+.bar {
+  height: .15rem;
+  width: 100%;
+  background-color: #FFFFFF;
+}
+
+@media (max-width: 800px) {
+  .hamburgerMenu {
+    display: flex;
+  }
+
+  .navbar {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .links {
+    height: 100vh;
+    width: 100%;
+    display: none;
+    justify-content: center;
+  }
+
+  .links ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .links ul li {
+    width: 100%;
+  }
+
+  .links li a {
+    width: 100vw;
+    text-align: center;
+    font-weight: bold;
+    padding: 1rem 0;
+  }
+
+  .active {
+    display: flex;
+  }
+}
+

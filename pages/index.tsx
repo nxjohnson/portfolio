@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import Navbar from '../components/Navbar';
 import Work from '../components/Work';
 import Skills from '../components/Skills';
 import AboutMe from '../components/AboutMe';
@@ -12,38 +13,41 @@ import { faGithub, faLinkedin, faLinkedinIn } from '@fortawesome/free-brands-svg
 
 const Home: NextPage = () => {
   return (
-    <main className='main'>
-      <div className={styles.hero}>
-        <Image
-          src={hero}
-          alt="sunset"
-          layout="fill"
-          objectFit="cover"
-          quality={100}
-          priority
-        />
-        <div className={styles.heroContainer}>
-          <div className={styles.heroContent}>
-            <h1 className={styles.intro}>Hi. I&apos;m Neil.<br />A Full Stack Engineer.</h1>
-            <div>
-              <a href="https://www.linkedin.com/in/johnson-neil/" target="_blank" rel="noopener noreferrer">
-                <FontAwesomeIcon className={styles.icon} icon={faLinkedinIn} size="2x" />
-              </a>
-              <a href="https://github.com/nxjohnson" target="_blank" rel="noopener noreferrer">
-                <FontAwesomeIcon className={styles.icon} icon={faGithub} size="2x" />
-              </a>
+    <>
+      <Navbar />
+      <main className='main'>
+        <div id="home" className={styles.hero}>
+          <Image
+            src={hero}
+            alt="sunset"
+            layout="fill"
+            objectFit="cover"
+            quality={100}
+            priority
+          />
+          <div className={styles.heroContainer}>
+            <div className={styles.heroContent}>
+              <h1 className={styles.intro}>Hi. I&apos;m Neil.<br />A Full Stack Engineer.</h1>
+              <div>
+                <a href="https://www.linkedin.com/in/johnson-neil/" target="_blank" rel="noopener noreferrer">
+                  <FontAwesomeIcon className={styles.icon} icon={faLinkedinIn} size="2x" />
+                </a>
+                <a href="https://github.com/nxjohnson" target="_blank" rel="noopener noreferrer">
+                  <FontAwesomeIcon className={styles.icon} icon={faGithub} size="2x" />
+                </a>
 
-          </div>
+            </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div className={styles.sectionContainer}>
-        <Work />
-        <Skills />
-        <AboutMe />
-      </div>
-      <ContactForm />
-    </main>
+        <div className={styles.sectionContainer}>
+          <Work />
+          <Skills />
+          <AboutMe />
+        </div>
+        <ContactForm />
+      </main>
+    </>
     // <div className={styles.container}>
     //   <Head>
     //     <title>Create Next App</title>
