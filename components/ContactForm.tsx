@@ -43,7 +43,7 @@ const ContactForm = () => {
     <div id="contact" className={styles.contactContainer}>
       <div className={styles.contactBox}>
         <h2>Contact</h2>
-        <form className={styles.contactGrid}>
+        <form className={styles.contactGrid} onSubmit={(e) => submitForm(e)}>
           <div className={styles.contactTile}>
             <label htmlFor="name">Name</label>
             <input
@@ -52,6 +52,7 @@ const ContactForm = () => {
               name="name"
               value={name}
               onChange={(e) => setName(e.target.value)}
+              required
             />
           </div>
           <div className={styles.contactTile}>
@@ -62,6 +63,7 @@ const ContactForm = () => {
               name="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              required
             />
           </div>
           <div className={styles.contactTile}>
@@ -72,10 +74,11 @@ const ContactForm = () => {
                 rows={4}
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
+                required
               />
           </div>
         </form>
-          <button className={styles.submitButton} onClick={(e) => submitForm(e)}>{submitButton}</button>
+          <button className={styles.submitButton} type="submit">{submitButton}</button>
       </div>
     </div>
   )
