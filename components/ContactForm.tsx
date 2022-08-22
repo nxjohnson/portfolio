@@ -11,11 +11,12 @@ const ContactForm = () => {
   const [name, setName] = useState<string>('');
   const [email, setEmail] = useState<string>('');
   const [message, setMessage] = useState<string>('');
-
-
+  const [submitButton, setSubmitButton] = useState<string>('Send Email')
+  const [loader, setLoader] = useState<boolean>(false);
 
   const submitForm = (e: React.SyntheticEvent) => {
     e.preventDefault();
+    setSubmitButton('Sending Email...');
     const body: Email = {
       name,
       email,
@@ -26,10 +27,16 @@ const ContactForm = () => {
       method:'post',
       body: JSON.stringify(body)
     })
+      .then(() => setSubmitButton('Email Sent!'))
+      .catch(() => setSubmitButton('Something Went Wrong'))
 
     setName('');
     setEmail('');
     setMessage('');
+
+    setTimeout(() => {
+      setSubmitButton('Send Email');
+    }, 3000)
   }
 
   return (
@@ -68,7 +75,7 @@ const ContactForm = () => {
               />
           </div>
         </form>
-          <button className={styles.submitButton} onClick={(e) => submitForm(e)}>Send Email</button>
+          <button className={styles.submitButton} onClick={(e) => submitForm(e)}>{submitButton}</button>
       </div>
     </div>
   )

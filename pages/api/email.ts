@@ -31,7 +31,7 @@ export default function handler(
 const data: Data = {
   to: 'neiljohnson92@gmail.com', // Change to your recipient
   from: 'hello@neiljohnson.dev', // Change to your verified sender
-  subject: 'Sending with SendGrid is Fun',
+  subject: 'New Message From neiljohnson.dev',
   text: message,
   html: message.replace(/\n/g, '<br>'),
 }
