@@ -26,12 +26,12 @@
   text-align: center;
 }
 
-.icon {
-  color: white;
+.heroIcon {
+  color: #FFF;
   margin: 1rem;
 }
 
-.icon:hover {
+.heroIcon:hover {
   color: orangered;
 }
 
@@ -47,6 +47,10 @@
 @media (max-width: 800px) {
   .sectionContainer {
     padding: 4rem 0;
+  }
+
+  .heroIcon:hover {
+    color: #FFF;
   }
 }
 

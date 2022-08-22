@@ -113,4 +113,8 @@ a {
     width: 100%;
     padding: 4rem 2rem;
   }
+
+  button:hover {
+    background-color: #282828;
+  }
 }

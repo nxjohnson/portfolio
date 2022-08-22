@@ -9,7 +9,7 @@ import Image from 'next/image'
 import hero from "../public/neil-johnson-hero.jpg";
 import styles from '../styles/Home.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub, faLinkedin, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
+import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 
 const Home: NextPage = () => {
   return (
@@ -30,10 +30,10 @@ const Home: NextPage = () => {
               <h1 className={styles.intro}>Hi. I&apos;m Neil.<br />A Full Stack Engineer.</h1>
               <div>
                 <a href="https://www.linkedin.com/in/johnson-neil/" target="_blank" rel="noopener noreferrer">
-                  <FontAwesomeIcon className={styles.icon} icon={faLinkedinIn} size="2x" />
+                  <FontAwesomeIcon className={styles.heroIcon} icon={faLinkedinIn} size="2x" />
                 </a>
                 <a href="https://github.com/nxjohnson" target="_blank" rel="noopener noreferrer">
-                  <FontAwesomeIcon className={styles.icon} icon={faGithub} size="2x" />
+                  <FontAwesomeIcon className={styles.heroIcon} icon={faGithub} size="2x" />
                 </a>
 
             </div>
