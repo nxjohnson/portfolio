@@ -3,7 +3,7 @@
   width: 100%;
   overflow: hidden;
   z-index: -1;
-  /* margin-bottom: 6rem; */
+  margin-bottom: 6rem;
   background-color: red;
 }
 
@@ -37,9 +37,9 @@
 }
 
 @media (max-width: 800px) {
-  /* .hero {
+  .hero {
     margin-bottom: 4rem;
-  } */
+  }
 
   .heroIcon:hover {
     color: #FFF;

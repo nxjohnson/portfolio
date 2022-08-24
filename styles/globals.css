@@ -15,7 +15,7 @@ html {
 } /*16px*/
 
 body {
-  /* background-color: #D9D9D9; */
+  background-color: #D9D9D9;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   line-height: 1.75;
@@ -67,10 +67,6 @@ p, h1, h2, h3, h4, h5, h6 {
   isolation: isolate;
 }
 
-main {
-  margin-top: 6rem;
-}
-
 footer {
   background-color: #FFFFFF;
   margin-top: 6rem;
@@ -81,7 +77,6 @@ section {
   max-width: 1440px;
   margin: 0 auto;
   padding: 6rem 6rem;
-  background-color: #D9D9D9;
 }
 
 button {
@@ -108,10 +103,6 @@ a {
 @media (max-width: 800px) {
   html {
     font-size: 80%;
-  }
-
-  main {
-    margin-top: 4rem;
   }
 
   footer {
