@@ -3,7 +3,7 @@
   width: 100%;
   overflow: hidden;
   z-index: -1;
-  margin-bottom: 6rem;
+  /* margin-bottom: 6rem; */
   background-color: red;
 }
 
@@ -16,6 +16,7 @@
 }
 
 .heroContent {
+  color: #FFFFFF;
   padding: 0 2rem;
   display: flex;
   flex-direction: column;
@@ -24,12 +25,10 @@
 }
 
 .intro {
-  color: #FFFFFF;
   text-align: center;
 }
 
 .heroIcon {
-  color: #FFF;
   margin: 1rem;
 }
 
@@ -38,13 +37,9 @@
 }
 
 @media (max-width: 800px) {
-  .sectionContainer {
-    padding: 4rem 0;
-  }
-
-  .hero {
+  /* .hero {
     margin-bottom: 4rem;
-  }
+  } */
 
   .heroIcon:hover {
     color: #FFF;

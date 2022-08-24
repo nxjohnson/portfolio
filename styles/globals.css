@@ -67,6 +67,10 @@ p, h1, h2, h3, h4, h5, h6 {
   isolation: isolate;
 }
 
+main {
+  margin-top: 6rem;
+}
+
 footer {
   background-color: #FFFFFF;
   margin-top: 6rem;
@@ -104,6 +108,10 @@ a {
 @media (max-width: 800px) {
   html {
     font-size: 80%;
+  }
+
+  main {
+    margin-top: 4rem;
   }
 
   footer {
