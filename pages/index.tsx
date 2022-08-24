@@ -49,13 +49,13 @@ const Home: NextPage = () => {
             </div>
           </div>
         </div>
-        <div className={styles.sectionContainer}>
-          <Work />
-          <Skills />
-          <AboutMe />
-        </div>
-        <ContactForm />
+        <Work />
+        <Skills />
+        <AboutMe />
       </main>
+      <footer>
+        <ContactForm />
+      </footer>
     </>
   )
 }
