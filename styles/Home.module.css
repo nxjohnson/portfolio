@@ -1,6 +1,6 @@
 .hero {
   height: var(--app-height);
-  min-height: -webkit-fill-available;
+  height: -webkit-fill-available;
   width: 100%;
   overflow: hidden;
   z-index: -1;
@@ -10,7 +10,7 @@
 
 .heroContainer {
   height: var(--app-height);
-  min-height: -webkit-fill-available;
+  height: -webkit-fill-available;
   display: flex;
   justify-content: center;
   align-items: center;
