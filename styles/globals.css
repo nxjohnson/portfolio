@@ -53,7 +53,6 @@ small, .text_small {font-size: 0.75rem;}
 html, body {
   width: 100%;
   height: 100vh;
-  height: var(--app-height);
 }
 body {
   -webkit-font-smoothing: antialiased;
@@ -108,6 +107,10 @@ a {
 @media (max-width: 800px) {
   html {
     font-size: 80%;
+  }
+
+  html, body {
+    height: var(--app-height);
   }
 
   footer {
