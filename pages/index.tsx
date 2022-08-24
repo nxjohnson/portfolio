@@ -12,13 +12,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 
 const Home: NextPage = () => {
-  const appHeight = () => {
-    const doc = document.documentElement
-    doc.style.setProperty('--app-height', `${window.innerHeight}px`)
-  }
-  window.addEventListener('resize', appHeight)
-  appHeight()
-
   return (
     <>
       <Head>
