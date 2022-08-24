@@ -1,5 +1,5 @@
 .hero {
-  height: var(--app-height);
+  /* height: var(--app-height); */
   max-height: -webkit-fill-available;
   width: 100%;
   overflow: hidden;
@@ -9,7 +9,7 @@
 }
 
 .heroContainer {
-  height: var(--app-height);
+  /* height: var(--app-height); */
   max-height: -webkit-fill-available;
   display: flex;
   justify-content: center;
