@@ -9,7 +9,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #D9D9D9;
+  background-color: var(--section);
   padding: 2rem;
   margin: 12rem 6rem;
 }
@@ -58,7 +58,7 @@
 }
 
 .error {
-  color: red;
+  color: var(--error);
 }
 
 @media (max-width: 800px) {

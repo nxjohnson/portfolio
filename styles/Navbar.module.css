@@ -6,8 +6,8 @@
   position: fixed;
   padding: 1rem 3rem;
   z-index: 1;
-  background-color: #282828;
-  color: #FFFFFF;
+  background-color: var(--dark);
+  color: var(--dark-font);
 }
 
 .logo {
@@ -51,7 +51,7 @@
 .bar {
   height: .15rem;
   width: 100%;
-  background-color: #FFFFFF;
+  background-color: var(--dark-font);
 }
 
 @media (max-width: 800px) {

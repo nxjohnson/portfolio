@@ -17,7 +17,7 @@
 }
 
 .heroContent {
-  color: #FFFFFF;
+  color: var(--dark-font);
   padding: 0 2rem;
   display: flex;
   flex-direction: column;
@@ -34,7 +34,7 @@
 }
 
 .heroIcon:hover {
-  color: orangered;
+  color: var(--accent);
 }
 
 @media (max-width: 800px) {
@@ -43,7 +43,7 @@
   }
 
   .heroIcon:hover {
-    color: #FFF;
+    color: var(--dark-font);
   }
 }
 
