@@ -39,10 +39,10 @@ const Home: NextPage = () => {
             <div className={styles.heroContent}>
               <h1 className={styles.intro}>Hi. I&apos;m Neil.<br />A Full Stack Engineer.</h1>
               <div>
-                <a href="https://www.linkedin.com/in/johnson-neil/" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/in/johnson-neil/" target="_blank" rel="noopener noreferrer" aria-label='LinkedIn'>
                   <FontAwesomeIcon className={styles.heroIcon} icon={faLinkedinIn} size="2x" />
                 </a>
-                <a href="https://github.com/nxjohnson" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/nxjohnson" target="_blank" rel="noopener noreferrer" aria-label='Github'>
                   <FontAwesomeIcon className={styles.heroIcon} icon={faGithub} size="2x" />
                 </a>
 

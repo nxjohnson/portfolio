@@ -23,7 +23,7 @@ const Work = () => {
               <div className={styles.tileContent}>
                 <h2>{project.projectName}</h2>
                 <div className={styles.icon}>
-                  <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                  <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" aria-label={`${project.projectName} Github Repository`}>
                     <FontAwesomeIcon icon={faArrowUpRightFromSquare} size="2x" />
                   </a>
                 </div>
