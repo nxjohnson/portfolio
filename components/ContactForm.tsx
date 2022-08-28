@@ -39,17 +39,17 @@ const ContactForm = () => {
         <form className={styles.contactGrid} onSubmit={handleSubmit(submitForm)}>
           <div className={styles.contactTile}>
             <label htmlFor="name">Name</label>
-            <input {...register('name', {required: 'Please insert your name.'})} />
+            <input {...register('name', {required: 'Please insert your name.'})} id="name" name="name" />
             {errors.name && <span className={styles.error}><FontAwesomeIcon icon={faTriangleExclamation} /> {errors.name.message}</span>}
           </div>
           <div className={styles.contactTile}>
             <label htmlFor="email">Email</label>
-            <input {...register('email', {required: 'Please insert your email.', pattern: {value: /^\S+@\S+$/i, message: 'Please insert your email'} })} />
+            <input {...register('email', {required: 'Please insert your email.', pattern: {value: /^\S+@\S+$/i, message: 'Please insert your email'} })} id="email" name="email" />
             {errors.email && <span className={styles.error}><FontAwesomeIcon icon={faTriangleExclamation} /> {errors.email.message}</span>}
           </div>
           <div className={styles.contactTile}>
             <label htmlFor="message">Message</label>
-            <textarea rows={4} {...register('message', {required: 'Please insert your message.' })} />
+            <textarea rows={4} {...register('message', {required: 'Please insert your message.' })} id="message" name="message" />
             {errors.message && <span className={styles.error}><FontAwesomeIcon icon={faTriangleExclamation} /> {errors.message.message}</span>}
           </div>
           <div className={styles.submitContainer}>

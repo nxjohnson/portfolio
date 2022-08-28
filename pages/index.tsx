@@ -31,7 +31,7 @@ const Home: NextPage = () => {
             alt="sunset"
             layout="fill"
             objectFit="cover"
-            quality={100}
+            quality={50}
             style={{opacity: '0.6'}}
             priority
           />
