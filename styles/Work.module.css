@@ -42,7 +42,7 @@
 }
 
 .icon:hover {
-  color: var(--accent);
+  color: var(--muted-accent);
 }
 
 @media (max-width: 800px) {

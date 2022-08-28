@@ -32,6 +32,7 @@ const Home: NextPage = () => {
             layout="fill"
             objectFit="cover"
             quality={100}
+            style={{opacity: '0.6'}}
             priority
           />
           <div className={styles.heroContainer}>
