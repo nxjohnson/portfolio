@@ -3,9 +3,14 @@ import logo from '../public/Neil-Johnson-Logo.png';
 import Image from 'next/image';
 import styles from '../styles/Navbar.module.css';
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons'
 
 const Navbar = () => {
+  const [menuActive, setMenuActive] = useState<boolean>(false);
+
 const handleHamburgerClick = () => {
+    menuActive ? setMenuActive(false) : setMenuActive(true);
     const navbarLinks = document.getElementsByClassName(styles.links)[0];
     navbarLinks.classList.toggle(styles.active);
   }
@@ -13,6 +18,7 @@ const handleHamburgerClick = () => {
   const handleLinkClick = () => {
     const navbarLinks = document.getElementsByClassName(styles.links)[0];
     navbarLinks.classList.remove(styles.active);
+    setMenuActive(false);
   }
 
   return (
@@ -28,16 +34,15 @@ const handleHamburgerClick = () => {
         </a>
       </div>
       <div className={styles.hamburgerMenu} onClick={() => handleHamburgerClick()}>
-        <span className={styles.bar}></span>
-        <span className={styles.bar}></span>
+        {menuActive ? <FontAwesomeIcon icon={faXmark} size="2x" /> : <FontAwesomeIcon icon={faBars} size="2x" />}
       </div>
       <div className={styles.links}>
         <ul>
           <li onClick={() => handleLinkClick()}><a href="#work">Work</a></li>
           <li onClick={() => handleLinkClick()}><a href="#about-me">About</a></li>
           <li onClick={() => handleLinkClick()}><a href="/Neil-Johnson-Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a></li>
-          <li onClick={() => handleLinkClick()}><a href="#contact">Contact</a></li>
         </ul>
+        <a className={styles.navButton} href="#contact" onClick={() => handleLinkClick()}>Contact</a>
       </div>
     </nav>
   );

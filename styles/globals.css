@@ -23,9 +23,11 @@
 
 :root {
   --app-height: 100%;
+  --transition-delay: 200ms;
 
-  --accent: #BFAAA3;
-  --muted-accent: #F2F1F0;
+  --accent: #5D6E42;
+  --accent-hover: #788D55;
+  --muted-accent: #DBDBDB;
   --section: #F2F1F0;
   --background: #FFFFFF;
   --font: #000000;
@@ -114,16 +116,45 @@ button {
   border-radius: 50px;
   padding: 1rem 2rem;
   cursor: pointer;
+  transition: var(--transition-delay);
 }
 
 button:hover {
-  background-color: var(--accent);
+  background-color: var(--accent-hover);
 }
 
 a {
   color: inherit;
   text-decoration: none;
   cursor: pointer;
+}
+
+.fade-in {
+  animation: fade-in 1s ease-in;
+}
+
+.fade-down {
+  animation: fade-down 300ms ease-in 1s both;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-25%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media (max-width: 800px) {

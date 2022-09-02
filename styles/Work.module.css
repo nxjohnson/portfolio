@@ -39,6 +39,7 @@
   position: absolute;
   bottom: 2rem;
   right: 2rem;
+  transition: var(--transition-delay);
 }
 
 .icon:hover {
