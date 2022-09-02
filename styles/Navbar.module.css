@@ -4,13 +4,15 @@
   justify-content: space-between;
   align-items: center;
   position: fixed;
-  padding: 1rem 3rem;
+  padding: 1rem 0;
   z-index: 1;
   background-color: var(--dark);
   color: var(--dark-font);
+  font-weight: 600;
 }
 
 .logo {
+  padding-left: 3rem;
   display: flex;
   align-items: center;
 }
@@ -18,6 +20,12 @@
 .logo a {
   display: flex;
   align-items: center;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  padding-right: 2rem;
 }
 
 .links ul {
@@ -28,30 +36,48 @@
 
 .links li {
   list-style: none;
+  border-bottom: 2px solid transparent;
+  transition: 600ms;
+}
+
+.links li:hover {
+  position: relative;
+  border-bottom: 2px solid var(--accent);
 }
 
 .links li a {
   display: block;
-  padding-left: 2rem;
+  padding: 0 1rem;
   text-decoration: none;
 }
 
-.hamburgerMenu {
-  position: absolute;
-  display: none;
-  flex-direction: column;
-  justify-content: space-evenly;
-  top: 1.5rem;
-  right: 3rem;
-  width: 2rem;
-  height: 2rem;
-  cursor: pointer;
+.activeLink {
+  border-bottom: 2px solid var(--dark-font);
 }
 
-.bar {
-  height: .15rem;
-  width: 100%;
-  background-color: var(--dark-font);
+.navButton {
+  color: var(--dark-font);
+  background-color: var(--dark);
+  border: none;
+  border-radius: 50px;
+  margin: 0 1rem;
+  padding: 0.5rem 2rem;
+  background-color: var(--accent);
+  transition: var(--transition-delay);
+}
+
+.navButton:hover {
+  color: var(--dark-font);
+  background-color: var(--accent-hover);
+}
+
+.hamburgerMenu {
+  color: var(--dark-font);
+  position: absolute;
+  display: none;
+  top: 1.65rem;
+  right: 3rem;
+  cursor: pointer;
 }
 
 @media (max-width: 800px) {
@@ -68,24 +94,39 @@
   .links {
     height: 100vh;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
     display: none;
-    justify-content: center;
   }
 
   .links ul {
     flex-direction: column;
+    padding-top: 1rem;
     align-items: center;
   }
 
   .links ul li {
-    width: 100%;
+    width: calc(100% - 6rem);
+    border-bottom: 1px solid white;
+  }
+
+  .links ul li:first-child {
+    border-top: 1px solid white;
   }
 
   .links li a {
     width: 100vw;
-    text-align: center;
-    font-weight: bold;
     padding: 1rem 0;
+  }
+
+  .navButton {
+    width: calc(100% - 6rem);
+    margin-top: 1rem;
+    padding: 1rem 0;
+    text-align: center;
+    margin: 1rem 3rem;
+    background-color: var(--accent);
   }
 
   .active {

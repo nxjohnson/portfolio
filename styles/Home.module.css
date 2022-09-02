@@ -37,10 +37,11 @@
 
 .heroIcon {
   margin: 1rem;
+  transition: var(--transition-delay);
 }
 
 .heroIcon:hover {
-  color: var(--accent);
+  color: var(--accent-hover);
 }
 
 @media (max-width: 800px) {
