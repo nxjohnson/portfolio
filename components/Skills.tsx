@@ -43,6 +43,7 @@ const Skills = () => {
                 src={icon.path}
                 alt={icon.name}
                 layout="fill"
+                objectFit='contain'
               />
             </div>
           )
