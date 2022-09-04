@@ -1,29 +1,30 @@
 .skillsGridLayout {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
-  grid-gap: 5rem;
-  height: 33.33vh;
+  grid-gap: 3rem;
   width: 100%;
 }
 
-.skillsIcon {
-  position: relative;
+.centerIcons {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.skillsIcon {
+  height: 3rem;
+  width: 6rem;
+  max-width: 100%;
+  position: relative;
+}
+
 @media (max-width: 800px) {
   .skillsGridLayout {
-    display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
     grid-gap: 2rem;
-    height: 33.33vh;
-    width: 100%;
   }
 
   .skillsIcon {
-    max-height: 4rem;
+    height: 4rem;
+    width: 100%
   }
-
 }

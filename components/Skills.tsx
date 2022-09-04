@@ -38,12 +38,15 @@ const Skills = () => {
       <div className={styles.skillsGridLayout}>
         {techStack.map((icon, index) => {
           return (
-            <div className={styles.skillsIcon} key={index}>
-              <Image
-                src={icon.path}
-                alt={icon.name}
-                layout="fill"
-              />
+            <div className={styles.centerIcons} key={index}>
+              <div className={styles.skillsIcon}>
+                <Image
+                  src={icon.path}
+                  alt={icon.name}
+                  layout="fill"
+                  objectFit='contain'
+                />
+              </div>
             </div>
           )
         })}
