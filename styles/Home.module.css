@@ -2,14 +2,9 @@
   height: var(--app-height);
   max-height: -webkit-fill-available;
   width: 100%;
-  overflow: hidden;
   z-index: -1;
   margin-bottom: 6rem;
-  background: rgba(0, 0, 0)
-}
-
-.hero span {
-  opacity: 30%;
+  background: rgba(0, 0, 0);
 }
 
 .heroContainer {

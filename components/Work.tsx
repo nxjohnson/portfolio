@@ -11,7 +11,7 @@ const Work = () => {
   const createWebMock = (mockupType: string, images:Images[]) => {
     if (mockupType === 'web') {
       return (
-        <div className={styles.webMockupContainer} key={images[0].alt}>
+        <div className={styles.webMockupContainer}>
           <div className={styles.browserMockup}>
             <div className={styles.browserMockupImage}>
               <Image
@@ -25,7 +25,7 @@ const Work = () => {
       )
     } else {
       return (
-        <div className = {styles.mobileMockupContainer} key={images[0].alt}>
+        <div className = {styles.mobileMockupContainer}>
           {images.map((image) => {
             return (
               <div className={styles.mobileMockup} key={image.alt}>
@@ -47,7 +47,7 @@ const Work = () => {
   return (
     <section id="work" className={styles.workContainer}>
       <div className={styles.gridLayout}>
-        {projects.map((project, i) => {
+        {projects.map((project) => {
           return (
             <>
               <div key={`${project.projectName} image`} className={styles.mockupContainer}>
