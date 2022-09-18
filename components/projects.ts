@@ -48,7 +48,7 @@ const projects: Project[] = [
   },
   {
     projectName: 'Forte',
-    projectDescription: 'Forte is a music social media platform where you can connect with others based on music taste',
+    projectDescription: 'Forte is a mobile first music social media platform where you can connect with others based on music taste',
     techStack: ['Next.js', 'Material UI', 'Axios', 'Node.js', 'Express', 'Socket.io', 'Firebase'],
     githubUrl: 'https://github.com/nxjohnson/forte',
     mockupType: 'mobile',

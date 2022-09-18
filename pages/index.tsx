@@ -28,7 +28,7 @@ const Home: NextPage = () => {
         <div id="home" className={styles.hero}>
           <Image
             src={hero}
-            alt="sunset"
+            alt="Forest waterfall"
             layout="fill"
             objectFit="cover"
             quality={50}
