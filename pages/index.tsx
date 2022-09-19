@@ -35,7 +35,7 @@ const Home: NextPage = () => {
             style={{opacity: '0.6'}}
             priority
           />
-          <div className={styles.heroContainer}>
+          <div className={`${styles.heroContainer} hero-container`}>
             <div className={styles.heroContent}>
             <h1 className={`${styles.intro} fade-in`}>Hi. I&apos;m Neil.<br />A Full Stack Engineer.</h1>
               <div className="fade-down">
