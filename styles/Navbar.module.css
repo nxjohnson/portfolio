@@ -83,6 +83,7 @@
 .navButtonScrolled:hover {
   color: var(--dark-font);
   background-color: var(--accent-hover);
+  border: 2px solid var(--accent-hover);
 }
 
 .hamburgerMenu {
