@@ -4,6 +4,7 @@ import atelier from '../public/work-atelier.png'
 import forteOne from '../public/work-forte-1.png';
 import forteTwo from '../public/work-forte-2.png';
 import forteThree from '../public/work-forte-3.png';
+import portfolio from '../public/work-portfolio.png';
 
 export interface Project {
   projectName: string,
@@ -49,7 +50,7 @@ export const projects: Project[] = [
   {
     projectName: 'Forte',
     projectDescription: 'Forte is a mobile first music social media platform where you can connect with others based on music taste',
-    techStack: ['Next.js', 'Material UI', 'Axios', 'Node.js', 'Express', 'Socket.io', 'Firebase'],
+    techStack: ['React, Next.js', 'Material UI', 'Axios', 'Node.js', 'Express', 'Socket.io', 'Firebase'],
     githubUrl: 'https://github.com/nxjohnson/forte',
     mockupType: 'mobile',
     images: [
@@ -66,5 +67,18 @@ export const projects: Project[] = [
         alt: 'Forte music search',
       }
     ]
-  }
+  },
+  {
+    projectName: 'Software Engineer Portfolio',
+    projectDescription: 'This is my software engineer portofolio website that you are visiting right now',
+    techStack: ['Typescript', 'React', 'Next.js', 'Node.js'],
+    githubUrl: 'https://github.com/nxjohnson/portfolio',
+    mockupType: 'web',
+    images: [
+      {
+        src: portfolio,
+        alt: 'Portfolio homepage',
+      }
+    ]
+  },
 ]
