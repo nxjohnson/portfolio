@@ -5,21 +5,21 @@ import forteOne from '../public/work-forte-1.png';
 import forteTwo from '../public/work-forte-2.png';
 import forteThree from '../public/work-forte-3.png';
 
-interface Project {
+export interface Project {
   projectName: string,
   projectDescription: string,
   techStack: string[],
   githubUrl: string,
-  mockupType: string,
+  mockupType: 'web' | 'mobile',
   images: Image[],
 }
 
-interface Image {
+export interface Image {
   src: StaticImageData,
   alt: string,
 }
 
-const projects: Project[] = [
+export const projects: Project[] = [
   {
     projectName: 'Koigoi',
     projectDescription: 'Koigoi is a frontend focused single page e-commerce store',
@@ -68,5 +68,3 @@ const projects: Project[] = [
     ]
   }
 ]
-
-export default projects;

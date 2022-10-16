@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, FunctionComponent } from 'react';
 import logo from '../public/Neil-Johnson-Logo.png';
 import Image from 'next/image';
 import styles from '../styles/Navbar.module.css';
@@ -6,14 +6,18 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons'
 
-const Navbar = () => {
+interface NavbarOptions {
+  rootMargin: string,
+}
+
+const Navbar: FunctionComponent = () => {
   const [menuActive, setMenuActive] = useState<boolean>(false);
 
   useEffect(() => {
-    const navbar: any = document.getElementsByClassName(styles.navbar)[0];
-    const navButton: any = document.getElementsByClassName(styles.navButton)[0];
-    const heroContainer: any = document.querySelector(".hero-container");
-    const navbarOptions = {
+    const navbar: Element = document.getElementsByClassName(styles.navbar)[0];
+    const navButton: Element = document.getElementsByClassName(styles.navButton)[0];
+    const heroContainer: Element | null = document.querySelector(".hero-container");
+    const navbarOptions: NavbarOptions = {
       rootMargin: `-85% 0px 0px 0px`
     };
 
@@ -29,20 +33,22 @@ const Navbar = () => {
       })
     }, navbarOptions)
 
-    navbarObserver.observe(heroContainer);
+    if (heroContainer) {
+      navbarObserver.observe(heroContainer);
+    }
   }, [])
 
-  const handleHamburgerClick = () => {
+  const handleHamburgerClick = (): void => {
     menuActive ? setMenuActive(false) : setMenuActive(true);
-    const navbar = document.getElementsByClassName(styles.navbar)[0];
-    const navbarLinks = document.getElementsByClassName(styles.links)[0];
+    const navbar: Element = document.getElementsByClassName(styles.navbar)[0];
+    const navbarLinks: Element = document.getElementsByClassName(styles.links)[0];
     navbarLinks.classList.toggle(styles.active);
     navbar.classList.toggle(styles.activeNavbar);
   }
 
-  const handleLinkClick = () => {
-    const navbar = document.getElementsByClassName(styles.navbar)[0];
-    const navbarLinks = document.getElementsByClassName(styles.links)[0];
+  const handleLinkClick = (): void => {
+    const navbar: Element = document.getElementsByClassName(styles.navbar)[0];
+    const navbarLinks: Element = document.getElementsByClassName(styles.links)[0];
     navbarLinks.classList.remove(styles.active);
     navbar.classList.remove(styles.active);
     setMenuActive(false);

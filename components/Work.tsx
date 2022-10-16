@@ -1,14 +1,17 @@
 import Image, { StaticImageData } from 'next/image';
-import projects from './projects';
+import { projects, Project } from './projects';
 import styles from '../styles/Work.module.css';
+import { FunctionComponent } from 'react';
 
 type Images = {
   src: StaticImageData,
   alt: string,
 }
 
-const Work = () => {
-  const createWebMock = (mockupType: string, images:Images[]) => {
+type MockupType = 'web' | 'mobile';
+
+const Work: FunctionComponent = () => {
+  const createWebMock = (mockupType: MockupType, images:Images[]) => {
     if (mockupType === 'web') {
       return (
         <div className={styles.webMockupContainer}>
@@ -47,7 +50,7 @@ const Work = () => {
   return (
     <section id="work" className={styles.workContainer}>
       <div className={styles.gridLayout}>
-        {projects.map((project) => {
+        {projects.map((project: Project) => {
           return (
             <>
               <div key={`${project.projectName} image`} className={styles.mockupContainer}>

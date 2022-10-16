@@ -1,4 +1,3 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next'
 const sgMail = require('@sendgrid/mail')
 sgMail.setApiKey(process.env.SENDGRID_API_KEY)
@@ -15,7 +14,7 @@ interface Data {
   html: string,
 }
 
-export default function handler(
+export default function handler (
   req: NextApiRequest,
   res: NextApiResponse<Status>
 ) {

@@ -1,8 +1,9 @@
 import Image from 'next/image'
 import styles from '../styles/AboutMe.module.css';
 import profilePhoto from '../public/Neil-Johnson-Profile-Photo.jpg';
+import { FunctionComponent } from 'react';
 
-const AboutMe = () => {
+const AboutMe: FunctionComponent = () => {
   return (
     <section id="about-me" className={styles.aboutContainer}>
       <div className={styles.aboutGridLayout}>
@@ -12,9 +13,6 @@ const AboutMe = () => {
               <Image
                 src={profilePhoto}
                 alt="Neil Johnson Headshot"
-                // height={2880}
-                // width={2880}
-                // layout='responsive'
                 layout="fill"
                 objectFit="contain"
               />

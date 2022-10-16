@@ -1,4 +1,5 @@
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
+import { FunctionComponent } from 'react'
 
 import aws from'../public/icons/aws.svg'
 import cloudinary from'../public/icons/cloudinary.svg'
@@ -24,13 +25,32 @@ import webpack from'../public/icons/webpack.svg'
 import styles from '../styles/Skills.module.css'
 
 interface TechStack {
-  path: any,
+  path: StaticImageData,
   name: string,
 }
 
-const Skills = () => {
+const Skills: FunctionComponent = () => {
   const techStack: TechStack[] = [
-    {path: javascript, name:'JavaScript'}, {path: react, name:'React'}, {path: nextjs, name:'Next.js'}, {path: html, name: 'HTML5'}, {path: css, name: 'CSS3'}, {path: materialui, name: 'Material UI'}, {path: nodejs, name: 'Node.js'}, {path: express, name: 'Express'}, {path: mysql, name: 'MySQL'}, {path: postgresql, name: 'PostgreSQL'}, {path: mongodb, name: 'MongoDB'}, {path: firebase, name: 'Firebase'}, {path: git, name: 'Git'}, {path: npm, name: 'NPM'}, {path: webpack, name: 'Webpack'}, {path: socketio, name: 'Socket.io'}, {path: cloudinary, name: 'Cloudinary'}, {path: eslint, name: 'ESLint'}, {path: nginx, name: 'NGINX'}, {path: aws, name: 'AWS'}
+    {path: javascript, name:'JavaScript'},
+    {path: react, name:'React'},
+    {path: nextjs, name:'Next.js'},
+    {path: html, name: 'HTML5'},
+    {path: css, name: 'CSS3'},
+    {path: materialui, name: 'Material UI'},
+    {path: nodejs, name: 'Node.js'},
+    {path: express, name: 'Express'},
+    {path: mysql, name: 'MySQL'},
+    {path: postgresql, name: 'PostgreSQL'},
+    {path: mongodb, name: 'MongoDB'},
+    {path: firebase, name: 'Firebase'},
+    {path: git, name: 'Git'},
+    {path: npm, name: 'NPM'},
+    {path: webpack, name: 'Webpack'},
+    {path: socketio, name: 'Socket.io'},
+    {path: cloudinary, name: 'Cloudinary'},
+    {path: eslint, name: 'ESLint'},
+    {path: nginx, name: 'NGINX'},
+    {path: aws, name: 'AWS'}
   ]
 
   return (

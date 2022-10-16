@@ -9,18 +9,6 @@
   margin: 0;
 }
 
-/* * {
-  color:#F2F1F0;
-  color:#585459;
-  color:#0D0903;
-  color:#4F5902;
-  color:#7C8C03;
-  color:#1E2601;
-  color:#465902;
-  color:#BFAAA3;
-} */
-
-
 :root {
   --app-height: 100%;
   --transition-delay: 200ms;
