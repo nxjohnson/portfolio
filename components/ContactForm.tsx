@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, FunctionComponent } from 'react';
 import { useForm } from 'react-hook-form';
 import styles from '../styles/ContactForm.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -10,9 +10,11 @@ type FormData = {
   message: string,
 }
 
-const ContactForm = () => {
+type SubmitButton = 'Send Email' | 'Sending Email...' | 'Email Sent!' | 'Something Went Wrong';
+
+const ContactForm: FunctionComponent = () => {
   const { register, handleSubmit, formState: { errors }, reset } = useForm<FormData>();
-  const [submitButton, setSubmitButton] = useState<string>('Send Email')
+  const [submitButton, setSubmitButton] = useState<SubmitButton>('Send Email')
   const [loader, setLoader] = useState<boolean>(false);
 
   const submitForm = (data: FormData) => {
