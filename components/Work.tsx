@@ -1,4 +1,6 @@
 import Image, { StaticImageData } from 'next/image';
+import WebMockup from './WebMockup';
+import MobileMockup from './MobileMockup';
 import { projects, Project } from './projects';
 import styles from '../styles/Work.module.css';
 import { FunctionComponent } from 'react';
@@ -11,42 +13,6 @@ type Images = {
 type MockupType = 'web' | 'mobile';
 
 const Work: FunctionComponent = () => {
-  const createWebMock = (mockupType: MockupType, images:Images[]) => {
-    if (mockupType === 'web') {
-      return (
-        <div className={styles.webMockupContainer}>
-          <div className={styles.browserMockup}>
-            <div className={styles.browserMockupImage}>
-              <Image
-                src={images[0].src}
-                alt={images[0].alt}
-                layout="responsive"
-              />
-            </div>
-          </div>
-        </div>
-      )
-    } else {
-      return (
-        <div className = {styles.mobileMockupContainer}>
-          {images.map((image) => {
-            return (
-              <div className={styles.mobileMockup} key={image.alt}>
-                <div className={styles.mobileMockupImage}>
-                  <Image
-                    src={image.src}
-                    alt={image.alt}
-                    layout="responsive"
-                  />
-                </div>
-              </div>
-            )
-          })}
-        </div>
-      )
-    }
-  }
-
   return (
     <section id="work" className={styles.workContainer}>
       <div className={styles.gridLayout}>
@@ -54,7 +20,7 @@ const Work: FunctionComponent = () => {
           return (
             <>
               <div key={`${project.projectName} image`} className={styles.mockupContainer}>
-                {createWebMock(project.mockupType, project.images)}
+                {project.mockupType === 'web' ? <WebMockup images={project.images} /> : <MobileMockup images={project.images} />}
               </div>
               <div className={styles.contentContainer} key={`${project.projectName} content`}>
                 <h2>{project.projectName}</h2>
